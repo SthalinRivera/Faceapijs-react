@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+// App.js
+import React from 'react';
+import { Route, Routes } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { FaceMarkDetection } from "./pages/FaceMarkDetection";
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=' bg-gray-100 dark:bg-gray-900 p-4  h-screen w-screen'>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/faceMarkDetection" element={<FaceMarkDetection />} />
+      </Routes>
+      
     </div>
   );
-}
+};
 
 export default App;
